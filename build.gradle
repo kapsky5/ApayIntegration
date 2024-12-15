@@ -18,14 +18,23 @@ repositories {
 	mavenCentral()
 }
 
+
 dependencies {
 //	Spring boot
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 //	ApaySdk
 	implementation 'software.amazon.pay:amazon-pay-api-sdk-java:2.6.4'
+//	Log4j2
+	implementation "org.springframework.boot:spring-boot-starter-log4j2"
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+configurations {
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
 }
 
 tasks.named('test') {
