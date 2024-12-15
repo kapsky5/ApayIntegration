@@ -2,7 +2,8 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.3.4'
 	id 'io.spring.dependency-management' version '1.1.6'
-}
+	id 'io.freefair.lombok' version '8.11'
+ }
 
 group = 'com.kapsky'
 version = '0.0.1-SNAPSHOT'
@@ -18,8 +19,11 @@ repositories {
 }
 
 dependencies {
+//	Spring boot
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	ApaySdk
 	implementation 'software.amazon.pay:amazon-pay-api-sdk-java:2.6.4'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
