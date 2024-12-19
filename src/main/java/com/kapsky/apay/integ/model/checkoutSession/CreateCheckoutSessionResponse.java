@@ -1,10 +1,11 @@
-package com.kapsky.apay.integ.model;
+package com.kapsky.apay.integ.model.checkoutSession;
 
 import lombok.Builder;
+import lombok.Data;
 import lombok.Value;
 
 @Builder
-@Value
+@Data
 public class CreateCheckoutSessionResponse {
     String checkoutSessionId;
 }
